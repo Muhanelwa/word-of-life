@@ -41,32 +41,57 @@ button {
 }
 
 /* Header & Navigation */
- .header {
-        width: 100%;
-        padding: 15px 0;
-        background-color: #f8f8f8;
-    }
-    
-    .nav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-    
-    .nav a {
-        margin: 0 15px;
-        text-decoration: none;
-        color: #333;
-        font-weight: 500;
-        padding: 5px 0;
-        transition: color 0.3s ease;
-    }
-    
-    .nav a:hover {
-        color: #0066cc;
-    }
-    
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav a {
+    margin-right: 20px;
+    color: #2c3e50;
+    font-weight: 500;
+    padding: 10px 0;
+    position: relative;
+}
+
+.nav a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #f9f506;
+    transition: width 0.3s;
+}
+
+.nav a:hover:after {
+    width: 100%;
+}
+
+.logo-container {
+    flex: 0 0 auto;
+}
+
+/* Updated logo style to use an actual image instead of placeholder */
+.logo {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
 /* Hero Section */
 .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('media/outsidechurch2.jpg');
@@ -136,6 +161,37 @@ button {
     font-size: 1.1rem;
 }
 
+/* About Section - MOVED TO TOP */
+.about {
+    background-color: white;
+    margin-top: -20px; /* To reduce gap with hero section */
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-image {
+    flex: 0 0 100%;
+    max-width: 400px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-image img {
+    width: 100%;
+}
+
 /* Service Times Section */
 .service-times {
     background-color: #f9f9f9;
@@ -163,127 +219,68 @@ button {
     margin-bottom: 15px;
 }
 
-/* Transport Booking - Updated */
-.transport-booking {
+/* Decorative Elements - REPLACEMENT FOR TRANSPORT BOOKING */
+.decorative-container {
     max-width: 600px;
-    margin: 0 auto;
-    background-color: white;
-    padding: 30px;
-    border-radius: 5px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.decorative-divider {
+    height: 3px;
+    background: linear-gradient(to right, transparent, #fbcb09, transparent);
+    margin: 30px auto;
+    width: 80%;
+}
+
+.decorative-quote {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #555;
+    padding: 20px;
+    border-left: 4px solid #fbcb09;
+    background-color: #f9f9f9;
+    border-radius: 0 5px 5px 0;
+    margin: 30px 0;
+}
+
+.decorative-icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 30px 0;
+}
+
+.decorative-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #fbcb09;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.transport-booking h3 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #070809;
-}
-
-.transport-booking p {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.transport-booking form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.transport-booking input,
-.transport-booking select {
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.transport-booking button {
-    margin-top: 10px;
-}
-
-/* Updated booking lists containers */
-#transport-bookings,
-#bible-transport-bookings,
-#past-bookings {
-    margin-top: 30px;
-}
-
-#bookings-list,
-#bible-bookings-list,
-#past-bookings-list {
-    list-style-type: none;
-    padding: 0;
-}
-
-#bookings-list li,
-#bible-bookings-list li,
-#past-bookings-list li {
-    padding: 10px;
-    border-bottom: 1px solid #eee;
-    position: relative;
-}
-
-/* New styles for booking actions */
-.booking-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.booking-info {
-    flex: 1;
-}
-
-.booking-actions {
-    display: flex;
-    gap: 10px;
-}
-
-.delete-booking {
-    background-color: #e74c3c;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 3px;
-    font-size: 0.8rem;
-    transition: background-color 0.3s;
-}
-
-.delete-booking:hover {
-    background-color: #c0392b;
-}
-
-/* Tabs for active vs past bookings */
-.bookings-tabs {
-    display: flex;
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 15px;
-}
-
-.bookings-tab {
-    padding: 10px 20px;
-    background-color: #f5f5f5;
-    border: 1px solid #ddd;
-    border-bottom: none;
-    border-radius: 5px 5px 0 0;
-    margin-right: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.bookings-tab.active {
+.decorative-block {
+    padding: 30px;
     background-color: white;
-    border-bottom: 1px solid white;
-    margin-bottom: -1px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
 }
 
-.bookings-content {
-    display: none;
-}
-
-.bookings-content.active {
-    display: block;
+.decorative-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #fbcb09, #f9d505);
 }
 
 /* Bible Studies Section */
@@ -526,6 +523,69 @@ button {
     margin-bottom: 10px;
 }
 
+/* Global Missions - ADDING INFO ABOUT SPHA */
+.global-missions {
+    background-color: #f9f9f9;
+    padding: 60px 5%;
+}
+
+.missions-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.mission-card {
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+
+.mission-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.mission-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mission-content {
+    padding: 20px;
+}
+
+.mission-content h3 {
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+.mission-content .mission-date {
+    color: #7f8c8d;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.mission-content p {
+    margin-bottom: 15px;
+}
+
+.mission-highlight {
+    background-color: #fcf3d1;
+    border-left: 4px solid #fbcb09;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.mission-highlight p {
+    margin-bottom: 0;
+    font-style: italic;
+}
+
 /* Events Section */
 .events {
     background-color: #f9f9f9;
@@ -570,36 +630,6 @@ button {
     color: #7f8c8d;
     font-weight: 500;
     margin-bottom: 15px;
-}
-
-/* About Section */
-.about {
-    background-color: white;
-}
-
-.about-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.about-text {
-    flex: 1;
-    min-width: 300px;
-}
-
-.about-image {
-    flex: 0 0 100%;
-    max-width: 400px;
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.about-image img {
-    width: 100%;
 }
 
 /* Enhanced Gallery Section - with 10 more pictures and improved scrolling */
@@ -792,7 +822,7 @@ button {
         font-size: 1.8rem;
     }
     
-    .time-card, .study-card, .ministry-card, .event-card {
+    .time-card, .study-card, .ministry-card, .event-card, .mission-card {
         width: 100%;
     }
     
