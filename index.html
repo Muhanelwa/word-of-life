@@ -11,53 +11,48 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" />
 </head>
 <body>
-    <<header class="header">
-    <nav class="nav">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#bible-studies">Bible Studies</a>
-        <a href="#kids-ministry">Kids Ministry</a>
-        <a href="#teens-ministry">Teens Ministry</a>
-        <a href="#camps">Camps</a>
-        <a href="#outreach">Outreach</a>
-        <a href="#events">Events</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
-
-<style>
-    .header {
-        width: 100%;
-        padding: 15px 0;
-        background-color: #f8f8f8;
-    }
-    
-    .nav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-    
-    .nav a {
-        margin: 0 15px;
-        text-decoration: none;
-        color: #333;
-        font-weight: 500;
-        padding: 5px 0;
-        transition: color 0.3s ease;
-    }
-    
-    .nav a:hover {
-        color: #0066cc;
-    }
-</style>
+    <header class="header">
+        <nav class="nav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#bible-studies">Bible Studies</a>
+            <a href="#kids-ministry">Kids Ministry</a>
+            <a href="#teens-ministry">Teens Ministry</a>
+            <a href="#camps">Camps</a>
+            <a href="#outreach">Outreach</a>
+            <a href="#events">Events</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="logo-container">
+            <div class="logo-placeholder">WOL</div>
+        </div>
+    </header>
 
     <section class="hero" id="home">
         <h1>Word of Life Student Church</h1>
         <p>Join us as we grow together in faith, hope, and love. Experience the transformative power of God's Word in a welcoming community.</p>
         <button class="cta-button">Join Us This Sunday</button>
+    </section>
+
+    <!-- Moved About Us section to the top -->
+    <section class="section about" id="about">
+        <div class="about-content">
+            <div class="about-image">
+                <img src="media/building.jpg" alt="Church Building" />
+            </div>
+            <div class="about-text">
+                <h2>About Us</h2>
+                <p>Founded in 2009, Word of Life Church has become a vibrant community in Port Elizabeth, committed to spreading the Gospel and making disciples of all nations. The church is dedicated to creating a welcoming environment where people can grow in their relationship with God through Biblical teaching, fellowship, and prayer.</p>
+
+                <p>At Word of Life Church, we believe in the transformative power of God's Word to change lives. We are passionate about helping individuals discover their purpose and live out their faith in every area of life. The church plays a key role in nurturing a diverse congregation, which includes students, families, and members of the surrounding community.</p>
+
+                <p>In addition to weekly services, the church organizes various programs such as Bible studies, youth events, and community outreach, all designed to strengthen faith and encourage service to others. The church's welcoming spirit and commitment to biblical truth create a space where everyone can thrive, find support, and grow deeper in their walk with Christ.</p>
+
+                <p>Through its ministry, Word of Life Church aims to impact the city and beyond, building lasting relationships and spreading hope in both personal and global missions.</p>
+                <p>Join us as we continue to grow in faith, love, and service to our community and the world.</p>
+            </div>
+        </div>
     </section>
 
     <section class="section service-times" id="services">
@@ -75,25 +70,12 @@
                 <p>Prayer & Praise Service</p>
             </div>
         </div>
-        <div class="transport-booking">
-            <h3>Need Transport?</h3>
-            <p>Book our free transport service for Sunday services:</p>
-            <form id="transport-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="tel" placeholder="Phone Number" required>
-                <input type="text" placeholder="Pickup Location" required>
-                <select required>
-                    <option value="">Select Service</option>
-                    <option value="sunday-morning">Sunday Morning</option>
-                    <option value="campus-connect">Campus Connect</option>
-                </select>
-                <button type="submit" class="cta-button">Book Transport</button>
-            </form>
-            <div id="transport-bookings">
-                <h4>Current Bookings:</h4>
-                <ul id="bookings-list">
-                    <!-- Bookings will appear here -->
-                </ul>
+        <!-- Replaced transport booking with decorative styles -->
+        <div class="decorative-container">
+            <div class="decorative-element">
+                <h3>Join Us for Worship</h3>
+                <p>We'd love to have you join us for our services. Everyone is welcome!</p>
+                <i class="fas fa-church decorative-icon"></i>
             </div>
         </div>
     </section>
@@ -117,25 +99,12 @@
                 <p>A supportive community of men and women of God exploring God's truth together with supper provided.</p>
             </div>
         </div>
-        <div class="transport-booking">
-            <h3>Need Transport for Bible Study?</h3>
-            <p>Book our free transport service:</p>
-            <form id="bible-transport-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="tel" placeholder="Phone Number" required>
-                <input type="text" placeholder="Pickup Location" required>
-                <select required>
-                    <option value="">Select Bible Study</option>
-                    <option value="wednesday">Wednesday Bible Study</option>
-                    <option value="friday">Friday Bible Study</option>
-                </select>
-                <button type="submit" class="cta-button">Book Transport</button>
-            </form>
-            <div id="bible-transport-bookings">
-                <h4>Current Bookings:</h4>
-                <ul id="bible-bookings-list">
-                    <!-- Bookings will appear here -->
-                </ul>
+        <!-- Replaced transport booking with decorative styles -->
+        <div class="decorative-container">
+            <div class="decorative-element">
+                <h3>Grow in Faith Together</h3>
+                <p>Our Bible studies provide a welcoming environment to deepen your spiritual journey.</p>
+                <i class="fas fa-book-open decorative-icon"></i>
             </div>
         </div>
     </section>
@@ -263,9 +232,9 @@
         <!-- This section will have the baptism background image -->
         <div class="baptism-content">
             <h2>Take Your Next Step in Faith</h2>
-            <p>Baptism is a public declaration of your faith in Jesus Christ and a symbol of your new life in Him. It represents dying to sin and being raised to walk in righteousness. Through baptism, believers follow Christ’s example and obey His command. It is a step of faith that shows your commitment to God and His church.  
+            <p>Baptism is a public declaration of your faith in Jesus Christ and a symbol of your new life in Him. It represents dying to sin and being raised to walk in righteousness. Through baptism, believers follow Christ's example and obey His command. It is a step of faith that shows your commitment to God and His church.  
 
-                Romans 6:4 – “We were therefore buried with him through baptism into death in order that, just as Christ was raised from the dead through the glory of the Father, we too may live a new life.”</p>
+                Romans 6:4 – "We were therefore buried with him through baptism into death in order that, just as Christ was raised from the dead through the glory of the Father, we too may live a new life."</p>
             <p>Contact us to learn more about upcoming baptism opportunities</p>
         </div>
     </section>
@@ -282,21 +251,21 @@
                 <div class="outreach-grid">
                     <div class="outreach-item">
                         <h3>Campus Outreach</h3>
-                        <p>Reaching and sharing the Word of God with students at Nelson Mandela University is a vital mission that helps young people grow spiritually in their academic journey. Through Bible studies, fellowship gatherings, and discipleship programs, students can deepen their faith and build a strong Christian community. Engaging in prayer, worship, and outreach events allows them to share God’s love with their peers. By creating a welcoming space for discussions and spiritual growth, more students can come to know Christ personally.  
+                        <p>Reaching and sharing the Word of God with students at Nelson Mandela University is a vital mission that helps young people grow spiritually in their academic journey. Through Bible studies, fellowship gatherings, and discipleship programs, students can deepen their faith and build a strong Christian community. Engaging in prayer, worship, and outreach events allows them to share God's love with their peers. By creating a welcoming space for discussions and spiritual growth, more students can come to know Christ personally.  
 
-                            Matthew 28:19 – “Go therefore and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit.”</p>
+                            Matthew 28:19 – "Go therefore and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit."</p>
                     </div>
                     <div class="outreach-item">
                         <h3>Global Missions</h3>
-                        <p>Global missions play a vital role in spreading the Gospel and serving communities worldwide. By supporting missionaries and taking annual mission trips, we help share God's love beyond our borders. In 2024, Perpe and Faith traveled to Namibia to serve and minister to the people there. These missions strengthen both those who go and the communities they reach, reflecting Christ’s heart for the nations.  
+                        <p>Global missions play a vital role in spreading the Gospel and serving communities worldwide. By supporting missionaries and taking annual mission trips, we help share God's love beyond our borders. In 2023, Spha traveled to Namibia to serve and minister to the people there. In 2024, Perpe and Faith also traveled to Namibia to serve and minister to the people there. These missions strengthen both those who go and the communities they reach, reflecting Christ's heart for the nations.  
 
-                            Mark 16:15 – “He said to them, ‘Go into all the world and preach the gospel to all creation.’”</p>
+                            Mark 16:15 – "He said to them, 'Go into all the world and preach the gospel to all creation.'"</p>
                     </div>
                     <div class="outreach-item">
                         <h3>Town Outreach</h3>
-                        <p>Reaching out to students living in town is crucial, as they are exposed to many influences that can draw them away from Christ. By creating a strong Christian community and inviting them to church, we can help them stay rooted in their faith. Encouraging accountability, prayer, and fellowship provides a safe space for spiritual growth. Through love, wisdom, and the truth of God’s Word, we can guide them to stand firm against ungodly influences.  
+                        <p>Reaching out to students living in town is crucial, as they are exposed to many influences that can draw them away from Christ. By creating a strong Christian community and inviting them to church, we can help them stay rooted in their faith. Encouraging accountability, prayer, and fellowship provides a safe space for spiritual growth. Through love, wisdom, and the truth of God's Word, we can guide them to stand firm against ungodly influences.  
 
-                            Romans 12:2 – “Do not conform to the pattern of this world, but be transformed by the renewing of your mind. Then you will be able to test and approve what God’s will is—his good, pleasing and perfect will.”</p>
+                            Romans 12:2 – "Do not conform to the pattern of this world, but be transformed by the renewing of your mind. Then you will be able to test and approve what God's will is—his good, pleasing and perfect will."</p>
                     </div>
                 </div>
             </div>
@@ -325,24 +294,6 @@
                     <p class="event-date">TBA</p>
                     <p></p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section about" id="about">
-        <div class="about-content">
-            <div class="about-text">
-            <p>Founded in 2009, Word of Life Church has become a vibrant community in Port Elizabeth, committed to spreading the Gospel and making disciples of all nations. The church is dedicated to creating a welcoming environment where people can grow in their relationship with God through Biblical teaching, fellowship, and prayer.
-
-            <p>At Word of Life Church, we believe in the transformative power of God’s Word to change lives. We are passionate about helping individuals discover their purpose and live out their faith in every area of life. The church plays a key role in nurturing a diverse congregation, which includes students, families, and members of the surrounding community.
-
-                <p>In addition to weekly services, the church organizes various programs such as Bible studies, youth events, and community outreach, all designed to strengthen faith and encourage service to others. The church’s welcoming spirit and commitment to biblical truth create a space where everyone can thrive, find support, and grow deeper in their walk with Christ. 
-
-                    <p>Through its ministry, Word of Life Church aims to impact the city and beyond, building lasting relationships and spreading hope in both personal and global missions.</p>
-                <p>Join us as we continue to grow in faith, love, and service to our community and the world.</p>
-            </div>
-            <div class="about-image">
-                <img src="media/building.jpg" alt="Church Building" />
             </div>
         </div>
     </section>
@@ -384,6 +335,7 @@
                 <img src="media/afterchurch3.jpg" alt="Church Community" />
             </div>
         </div>
+    </section>
 
     <section class="map-section" id="find-us">
         <h2>Find Us</h2>
@@ -405,6 +357,7 @@
             <div class="footer-column">
                 <h3>Quick Links</h3>
                 <a href="#home">Home</a>
+                <a href="#about">About</a>
                 <a href="#services">Services</a>
                 <a href="#bible-studies">Bible Studies</a>
                 <a href="#kids-ministry">Kids Ministry</a>
@@ -412,7 +365,6 @@
                 <a href="#camps">Camps</a>
                 <a href="#outreach">Outreach</a>
                 <a href="#events">Events</a>
-                <a href="#about">About</a>
             </div>
             <div class="footer-column">
                 <h3>Connect With Us</h3>
@@ -447,312 +399,38 @@
                 .openPopup();
         });
 
-        // JavaScript for transport booking forms
-        document.getElementById('transport-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const form = e.target;
-            const name = form.querySelector('input[type="text"]').value;
-            const phone = form.querySelector('input[type="tel"]').value;
-            const location = form.querySelectorAll('input[type="text"]')[1].value;
-            const service = form.querySelector('select').options[form.querySelector('select').selectedIndex].text;
+        // JavaScript for gallery scrolling
+        function setupGalleryScrolling() {
+            const galleryContainers = document.querySelectorAll('.camp-gallery');
             
-            addBooking(name, phone, location, service, 'bookings-list');
-            form.reset();
-        });
-
-        document.getElementById('bible-transport-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const form = e.target;
-            const name = form.querySelector('input[type="text"]').value;
-            const phone = form.querySelector('input[type="tel"]').value;
-            const location = form.querySelectorAll('input[type="text"]')[1].value;
-            const study = form.querySelector('select').options[form.querySelector('select').selectedIndex].text;
-            
-            addBooking(name, phone, location, study, 'bible-bookings-list');
-            form.reset();
-        });
-
-        function addBooking(name, phone, location, service, listId) {
-            const list = document.getElementById(listId);
-            const item = document.createElement('li');
-            item.textContent = `${name} - ${phone} - ${location} - ${service}`;
-            list.appendChild(item);
-            
-            // Save to localStorage
-            const bookings = JSON.parse(localStorage.getItem(listId) || '[]');
-            bookings.push({ name, phone, location, service });
-            localStorage.setItem(listId, JSON.stringify(bookings));
-        }
-
-        // Load saved bookings
-        function loadBookings() {
-            const serviceBookings = JSON.parse(localStorage.getItem('bookings-list') || '[]');
-            const bibleBookings = JSON.parse(localStorage.getItem('bible-bookings-list') || '[]');
-            
-            const serviceList = document.getElementById('bookings-list');
-            const bibleList = document.getElementById('bible-bookings-list');
-            
-            serviceBookings.forEach(booking => {
-                const item = document.createElement('li');
-                item.textContent = `${booking.name} - ${booking.phone} - ${booking.location} - ${booking.service}`;
-                serviceList.appendChild(item);
-            });
-            
-            bibleBookings.forEach(booking => {
-                const item = document.createElement('li');
-                item.textContent = `${booking.name} - ${booking.phone} - ${booking.location} - ${booking.service}`;
-                bibleList.appendChild(item);
+            galleryContainers.forEach(container => {
+                // Add navigation buttons if needed
+                const leftButton = document.createElement('button');
+                leftButton.className = 'gallery-nav-button left';
+                leftButton.innerHTML = '<i class="fas fa-chevron-left"></i>';
+                
+                const rightButton = document.createElement('button');
+                rightButton.className = 'gallery-nav-button right';
+                rightButton.innerHTML = '<i class="fas fa-chevron-right"></i>';
+                
+                container.parentNode.appendChild(leftButton);
+                container.parentNode.appendChild(rightButton);
+                
+                // Scroll functionality
+                leftButton.addEventListener('click', () => {
+                    container.scrollBy({ left: -300, behavior: 'smooth' });
+                });
+                
+                rightButton.addEventListener('click', () => {
+                    container.scrollBy({ left: 300, behavior: 'smooth' });
+                });
             });
         }
         
-        window.onload = loadBookings;
-
-        // Local storage keys
-const SERVICE_BOOKINGS_KEY = 'serviceTransportBookings';
-const BIBLE_BOOKINGS_KEY = 'bibleTransportBookings';
-const PAST_BOOKINGS_KEY = 'pastTransportBookings';
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Initialize booking system
-    loadBookings();
-    setupTabsSystem();
-    setupGalleryScrolling();
-    
-    // Setup form submissions
-    const serviceForm = document.getElementById('service-transport-form');
-    const bibleForm = document.getElementById('bible-transport-form');
-    
-    if (serviceForm) {
-        serviceForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            addBooking('service');
+        // Initialize when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            setupGalleryScrolling();
         });
-    }
-    
-    if (bibleForm) {
-        bibleForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            addBooking('bible');
-        });
-    }
-    
-    // Setup event cleanup - simulates checking if events are past
-    setupEventCleanup();
-});
-
-// Load bookings from localStorage
-function loadBookings() {
-    // Load current bookings
-    const serviceBookings = JSON.parse(localStorage.getItem(SERVICE_BOOKINGS_KEY)) || [];
-    const bibleBookings = JSON.parse(localStorage.getItem(BIBLE_BOOKINGS_KEY)) || [];
-    const pastBookings = JSON.parse(localStorage.getItem(PAST_BOOKINGS_KEY)) || [];
-    
-    // Display bookings
-    displayBookings('bookings-list', serviceBookings, SERVICE_BOOKINGS_KEY);
-    displayBookings('bible-bookings-list', bibleBookings, BIBLE_BOOKINGS_KEY);
-    displayBookings('past-bookings-list', pastBookings, PAST_BOOKINGS_KEY, true);
-}
-
-// Add a new booking
-function addBooking(type) {
-    const storageKey = type === 'service' ? SERVICE_BOOKINGS_KEY : BIBLE_BOOKINGS_KEY;
-    const formId = type === 'service' ? 'service-transport-form' : 'bible-transport-form';
-    const listId = type === 'service' ? 'bookings-list' : 'bible-bookings-list';
-    
-    const form = document.getElementById(formId);
-    if (!form) return;
-    
-    // Gather form data
-    const formData = new FormData(form);
-    const bookingData = {
-        id: Date.now().toString(), // Unique ID for each booking
-        name: formData.get('name'),
-        email: formData.get('email'),
-        phone: formData.get('phone'),
-        date: formData.get('date'),
-        time: formData.get('time'),
-        passengers: formData.get('passengers'),
-        notes: formData.get('notes'),
-        createdAt: new Date().toISOString()
-    };
-    
-    // Save booking
-    const bookings = JSON.parse(localStorage.getItem(storageKey)) || [];
-    bookings.push(bookingData);
-    localStorage.setItem(storageKey, JSON.stringify(bookings));
-    
-    // Update display
-    displayBookings(listId, bookings, storageKey);
-    
-    // Reset form
-    form.reset();
-    
-    // Show confirmation
-    alert('Your transport booking has been confirmed!');
-}
-
-// Display bookings in the appropriate list
-function displayBookings(listId, bookings, storageKey, isPastList = false) {
-    const listElement = document.getElementById(listId);
-    if (!listElement) return;
-    
-    // Clear current list
-    listElement.innerHTML = '';
-    
-    // Add each booking to the list
-    bookings.forEach(booking => {
-        const li = document.createElement('li');
-        li.className = 'booking-item';
-        
-        // Booking info
-        const bookingInfo = document.createElement('div');
-        bookingInfo.className = 'booking-info';
-        bookingInfo.innerHTML = `
-            <strong>${booking.name}</strong> - ${booking.date} at ${booking.time}<br>
-            Passengers: ${booking.passengers} | Phone: ${booking.phone}
-            ${booking.notes ? `<br>Notes: ${booking.notes}` : ''}
-        `;
-        
-        // Booking actions
-        const bookingActions = document.createElement('div');
-        bookingActions.className = 'booking-actions';
-        
-        // Delete button - for all bookings
-        const deleteBtn = document.createElement('button');
-        deleteBtn.className = 'delete-booking';
-        deleteBtn.textContent = 'Delete';
-        deleteBtn.onclick = function() {
-            deleteBooking(booking.id, storageKey);
-        };
-        
-        bookingActions.appendChild(deleteBtn);
-        
-        // Add elements to the list item
-        li.appendChild(bookingInfo);
-        li.appendChild(bookingActions);
-        listElement.appendChild(li);
-    });
-    
-    // Show message if no bookings
-    if (bookings.length === 0) {
-        const li = document.createElement('li');
-        li.textContent = isPastList ? 'No past bookings found.' : 'No current bookings.';
-        listElement.appendChild(li);
-    }
-}
-
-// Delete a booking
-function deleteBooking(bookingId, storageKey) {
-    if (confirm('Are you sure you want to cancel this booking?')) {
-        let bookings = JSON.parse(localStorage.getItem(storageKey)) || [];
-        bookings = bookings.filter(booking => booking.id !== bookingId);
-        localStorage.setItem(storageKey, JSON.stringify(bookings));
-        
-        // Refresh the displayed list
-        const listId = storageKey === SERVICE_BOOKINGS_KEY ? 'bookings-list' : 
-                      storageKey === BIBLE_BOOKINGS_KEY ? 'bible-bookings-list' : 'past-bookings-list';
-        const isPastList = storageKey === PAST_BOOKINGS_KEY;
-        
-        displayBookings(listId, bookings, storageKey, isPastList);
-    }
-}
-
-// Move bookings to past bookings after event date
-function setupEventCleanup() {
-    // This would normally run on a schedule or when the page loads
-    // For demo purposes, we'll add a clean now button
-    const cleanButton = document.getElementById('clean-past-events');
-    if (cleanButton) {
-        cleanButton.addEventListener('click', cleanPastEvents);
-    }
-    
-    // Auto check on page load
-    cleanPastEvents();
-}
-
-// Clean past events
-function cleanPastEvents() {
-    const currentDate = new Date();
-    
-    // Check service bookings
-    const serviceBookings = JSON.parse(localStorage.getItem(SERVICE_BOOKINGS_KEY)) || [];
-    const currentServiceBookings = [];
-    const pastServiceBookings = [];
-    
-    serviceBookings.forEach(booking => {
-        const bookingDate = new Date(booking.date + ' ' + booking.time);
-        if (bookingDate < currentDate) {
-            pastServiceBookings.push(booking);
-        } else {
-            currentServiceBookings.push(booking);
-        }
-    });
-    
-    // Check bible study bookings
-    const bibleBookings = JSON.parse(localStorage.getItem(BIBLE_BOOKINGS_KEY)) || [];
-    const currentBibleBookings = [];
-    const pastBibleBookings = [];
-    
-    bibleBookings.forEach(booking => {
-        const bookingDate = new Date(booking.date + ' ' + booking.time);
-        if (bookingDate < currentDate) {
-            pastBibleBookings.push(booking);
-        } else {
-            currentBibleBookings.push(booking);
-        }
-    });
-    
-    // Get existing past bookings
-    const existingPastBookings = JSON.parse(localStorage.getItem(PAST_BOOKINGS_KEY)) || [];
-    const allPastBookings = [
-        ...existingPastBookings,
-        ...pastServiceBookings,
-        ...pastBibleBookings
-    ];
-    
-    // Update storage
-    localStorage.setItem(SERVICE_BOOKINGS_KEY, JSON.stringify(currentServiceBookings));
-    localStorage.setItem(BIBLE_BOOKINGS_KEY, JSON.stringify(currentBibleBookings));
-    localStorage.setItem(PAST_BOOKINGS_KEY, JSON.stringify(allPastBookings));
-    
-    // Refresh displays
-    displayBookings('bookings-list', currentServiceBookings, SERVICE_BOOKINGS_KEY);
-    displayBookings('bible-bookings-list', currentBibleBookings, BIBLE_BOOKINGS_KEY);
-    displayBookings('past-bookings-list', allPastBookings, PAST_BOOKINGS_KEY, true);
-}
-
-// Setup tabs for active vs past bookings
-function setupTabsSystem() {
-    const tabs = document.querySelectorAll('.bookings-tab');
-    if (tabs.length === 0) return;
-    
-    tabs.forEach(tab => {
-        tab.addEventListener('click', function() {
-            // Remove active class from all tabs
-            tabs.forEach(t => t.classList.remove('active'));
-            
-            // Add active class to clicked tab
-            this.classList.add('active');
-            
-            // Hide all content
-            const contents = document.querySelectorAll('.tab-content');
-            contents.forEach(content => content.classList.remove('active'));
-            
-            // Show the selected content
-            const targetContent = document.getElementById(this.dataset.target);
-            if (targetContent) {
-                targetContent.classList.add('active');
-            }
-        });
-    });
-    
-    // Activate first tab by default
-    if (tabs.length > 0) {
-        tabs[0].click();
-    }
-}
-
-
     </script>
     
 </body>
